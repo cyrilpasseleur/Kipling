@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Easybag(Kipling)</title>
+            <meta name="description" content="ontdek de laatste nieuwsberichten en beslis mee over de veranderingen in Vlaanderen">
+            <meta name="author" content="Cyril Passeleur">
+            <meta name="keywords" content="Ecolo, Partij, politiek">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="css/reset.css">
+            <link rel="stylesheet" type="text/css" href="css/stijl.css">
+            <link href="https://fonts.googleapis.com/css?family=Maven+Pro:700" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+            <script src="js/jquery.js"></script>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </head>
+        <script>
+				/*controleren of pagina volledig klaar is / geladen */
+			$(document).ready(function() {
+			/*zodra je op a drukt gebeurt er iets*/
+				$('nav a, header a ').on('click',function(e) {	
+					/*zodra ik op een van de a's druk. verwijdert de active*/
+					$('nav a ').removeClass('active');
+					/*zodra je op iets drukt. active maken.*/
+					$(this).toggleClass('active');
+					/* voorkomen van een flits*/
+					e.preventDefault();
+				/* variabele target*/
+				/*haal ik de id uit met url via# en de naam van de id*/
+	    			target = this.hash;
+					/*Dit is de animatie tussen de pagina's; 900 is de time van de animatie*/
+					$('html, body').animate({'scrollTop':
+					$(target).offset().top}, 2s, function () {
+						window.location.hash = target;
+					});
+					
+				});
+			});
+</script>
+        <script>
+		$(document).ready(function() {
+    		$('nav a').click(function(e) {
+        		$('nav ul').toggleClass('active');
+        		e.preventDefault();
+    		});
+		});
+		</script>
+        <body>
+            <nav>
+                <p>0800 81572 <em>Bel ons!</em><a href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession"><img src="beelden/inloggen.png" alt="foto van cyril"></a><img class="kar" src="beelden/kar.png" alt="foto van cyril"></p>
+                <img src="beelden/logo.png" alt="foto van cyril">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#wat">WAT</a></li>
+                    <li><a href="#spec">CAPACITEITEN</a></li>
+                    <li><a href="#kopen">COLLECTIE</a></li>
+                    <li><a href="#reclame">RECLAMESPOT</a></li>
+                    <li><a href="#web">WEBSHOP</a></li>
+                    <li><a href="#gal">GALERIJ</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <header id="home">
+            <article><h1>Kipling presenteert Easybag</h1><p>Afritsbaar, waterbestendig, hoog volume,..</p><a href="#kopen"><button href="kopen">Bekijk onze collectie</button></a></article>
+            <a href="#wat"><img src="beelden/begin.png" alt="foto van cyril"></a>
+            </header>
+            <main id="wat">
+                <img src="beelden/rugzak.png" alt="foto van cyril">
+                <article>
+                    <h1>Easybag</h1>
+                    <p>Kipling presenteert zijn nieuwste product,"De EasyBag". Een tweedelige rugzak waarbij je het kleine deel van het grotere kunt afritsen. De rugzak is ideaal voor jongeren die vaak heel wat mee moeten sleuren naar school, werk of dergelijke...</p>
+                    <br><a href="#">lees meer</a>
+                </article>
+                <section id="spec">
+                    <article><img src="beelden/foto1.png" alt="foto van cyril"></article>
+                    <article>
+                        <img class="icon"src="beelden/icon1.png" alt="foto van cyril">
+                        <h2>Afritsbaar</h2><p>De rugzak maakt gebruik van een rits die om de rugzak heen gaat. Hierbij kun je hem opsplitsen in 2 delen.</p>
+                        <a href="#reclame1">Filmpje</a>
+                    </article>
+                </section>
+                <section>
+                    <article class="afoto"><img src="beelden/foto2.png" alt="foto van cyril"></article>
+                    <article>
+                        <img class="icon"src="beelden/icon2.png" alt="foto van cyril">
+                        <h2>Anti-thief</h2><p>De firma heeft ervoor gezorgt dat dieven buiten je rugzak blijven dankzij de knopknopen </p>
+                        <a href="#reclame3">Filmpje</a>
+                    </article>
+                </section>
+                <section>
+                    <article><img src="beelden/foto3.png" alt="foto van cyril"></article>
+                    <article>
+                        <img class="icon"src="beelden/icon3.png" alt="foto van cyril">
+                        <h2>Waterbestendig</h2><p>De rugzak is opgebouwd uit sterke polyamide. Dit maakt de rugzak waterbestendig. </p>
+                        <a href="#reclame2">Filmpje</a>
+                    </article>
+                </section>
+                <section>
+                    <article class="afoto"><img src="beelden/foto4.png" alt="foto van cyril"></article>
+                    <article>
+                        <img class="icon"src="beelden/icon4.png" alt="foto van cyril">
+                        <h2>Ultra Volume</h2><p>Dankzij de hoge hoeveelheid binnenzakjes. Kun je veel spullen in de rugzak steken. Van Pennenzak to laptops,..</p>
+                        <a href="#reclame4">Filmpje</a>
+                    </article>                  
+                </section>
+                <img src="beelden/rugzak.png" alt="foto van cyril">
+                <article id="kopen" class="koop">
+                    <h2>€ 89,90</h2>
+                    <p>MAAT : 36 Breedte x 43 Hoogte x 20.5 Wijdte cm groot<br>
+                    GEWICHT: 0.8 kg<br>
+                    INHOUD : 35 Liter<br>
+                    MATERIAAL : 100% Polyamide<br>
+                    AAPJE : thais<br><br>
+                    </p>
+                    <form>
+                        <p>KLEUR</p>
+                    <select>
+					<option value="6TMMA">ZWART</option>
+					<option value="6TMMB">ROOD</option>
+					<option value="6TMMC">BLAUW</option>
+                    <option value="6TMMC">GROEN</option>
+                    <option value="6TMMC">GRIJS</option>
+                    </select>
+                    </form>
+                    <br><a href="#">Bestel</a>
+                </article>
+                <aside>
+                    <a href="#rugzak1"><img src="beelden/rugzak1.png" alt="foto van cyril"></a>
+                    <a href="#rugzak2"><img src="beelden/rugzak2.png" alt="foto van cyril"></a>
+                    <a href="#rugzak3"><img src="beelden/rugzak3.png" alt="foto van cyril"></a>
+                    <a href="#rugzak4"><img src="beelden/rugzak4.png" alt="foto van cyril"></a>
+                    <a href="#rugzak5"><img src="beelden/rugzak5.png" alt="foto van cyril"></a>
+                </aside>
+                <figure>
+                    <blockquote class="twitter-tweet" data-lang="en"><p lang="nl" dir="ltr">Deze rugzak is geweldig! Nu moet ik geen extra turnzak meer dragen maar alles kan in één zak. <a href="https://twitter.com/hashtag/easybag?src=hash&amp;ref_src=twsrc%5Etfw">#easybag</a> <a href="https://twitter.com/hashtag/kipling?src=hash&amp;ref_src=twsrc%5Etfw">#kipling</a></p>&mdash; lolfates (@cyriltopper) <a href="https://twitter.com/cyriltopper/status/970948353939988480?ref_src=twsrc%5Etfw">March 6, 2018</a></blockquote>
+					<blockquote class="twitter-tweet" data-lang="en"><p lang="nl" dir="ltr">Ja Inderdaad, Hij is heel handig en goedpook ook nog. <a href="https://twitter.com/hashtag/awesome?src=hash&amp;ref_src=twsrc%5Etfw">#awesome</a></p>&mdash; lolfates (@cyriltopper) <a href="https://twitter.com/cyriltopper/status/970950888952123392?ref_src=twsrc%5Etfw">March 6, 2018</a></blockquote>
+					<blockquote class="twitter-tweet" data-lang="en"><p lang="nl" dir="ltr">Ik gebruik de rugzak al bijna 2 jaar. Hij is een echte een aanrader. Je kunt eigenlijk van 2 rugzakken 1 maken <a href="https://twitter.com/hashtag/handig?src=hash&amp;ref_src=twsrc%5Etfw">#handig</a> <br>Hij is gisteren nog in het water gevallen :D. Maar gelukkig is hij waterbestendig en is niks er binnenin droog. <a href="https://twitter.com/hashtag/awesome?src=hash&amp;ref_src=twsrc%5Etfw">#awesome</a></p>&mdash; lolfates (@cyriltopper) <a href="https://twitter.com/cyriltopper/status/970953917050900480?ref_src=twsrc%5Etfw">March 6, 2018</a></blockquote>
+                </figure>
+                <figure id="gal" class="galerij">
+                    <img src="beelden/gal1.png" alt="foto van cyril">
+                    <img src="beelden/gal2.png" alt="foto van cyril">
+                    <img src="beelden/gal3.png" alt="foto van cyril">
+                    <img src="beelden/gal4.png" alt="foto van cyril">
+                    <img src="beelden/gal5.png" alt="foto van cyril">
+                    <img src="beelden/gal6.png" alt="foto van cyril">
+                </figure>
+                <footer id="contact">
+                    <article class="contact">
+                        <h3>Contactgegevens</h3>
+                        <p> Address: de Personeelsdienst<br>
+Steenweg op Bergen 427<br>
+B-1600 Sint-Pieters-Leeuw<br>
+tel+ 02/334.30.00<br>
+fax+ 02/467 80 92</p>
+                    </article>
+                    <article>
+   <form action="/action_page.php">
+  <div class="container">
+    <h4>Blijf Up to Date</h4>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Uw email*" name="email" required>
+
+    <label for="psw"><b>Naam</b></label>
+    <input type="password" placeholder="Uw naam*" name="psw" required>
+
+      <button type="submit" class="signupbtn">Inschrijven</button>
+    </div>
+  </div>
+</form>
+                    </article>
+                    <article class='end'>© 2018 Copyright Cyril Passeleur</article>
+                </footer>
+                <li id="reclame" class="popup">
+                                <div>
+                                    <a href="#"><h5>&times;</h5></a>
+                                    <video width="91%" height="80%" controls>
+					<source src="video/recspot.mp4" type="video/mp4">
+					</video>
+                                </div>
+                            </li>
+                <li id="reclame1" class="popup">
+                                <div>
+                                    <a href="#spec"><h5>&times;</h5></a>
+                                    <video width="91%" height="80%" controls>
+					<source src="video/recspot1.mp4" type="video/mp4">
+					</video>
+                                </div>
+                            </li>
+                <li id="reclame2" class="popup">
+                                <div>
+                                    <a href="#spec"><h5>&times;</h5></a>
+                                    <video width="91%" height="80%" controls>
+					<source src="video/recspot2.mp4" type="video/mp4">
+					</video>
+                                </div>
+                            </li>
+                <li id="reclame3" class="popup">
+                                <div>
+                                    <a href="#spec"><h5>&times;</h5></a>
+                                    <video width="91%" height="80%" controls>
+					<source src="video/recspot3.mp4" type="video/mp4">
+					</video>
+                                </div>
+                            </li>
+                <li id="reclame4" class="popup">
+                                <div>
+                                    <a href="#spec"><h5>&times;</h5></a>
+                                    <video width="91%" height="80%" controls>
+					<source src="video/recspot4.mp4" type="video/mp4">
+					</video>
+                                </div>
+                            </li>
+                <li id="rugzak1" class="popup">
+                                <div>
+                                    <a href="#kopen"><h5>&times;</h5></a>
+                                    <img src="beelden/rugzak1.png">
+                                </div>
+                            </li>
+                <li id="rugzak2" class="popup">
+                                <div>
+                                    <a href="#kopen"><h5>&times;</h5></a>
+                                    <img src="beelden/rugzak2.png">
+                                </div>
+                            </li>
+                <li id="rugzak3" class="popup">
+                                <div>
+                                    <a href="#kopen"><h5>&times;</h5></a>
+                                    <img src="beelden/rugzak3.png">
+                                </div>
+                            </li>
+                <li id="rugzak4" class="popup">
+                                <div>
+                                    <a href="#kopen"><h5>&times;</h5></a>
+                                    <img src="beelden/rugzak4.png">
+                                </div>
+                            </li>
+                <li id="rugzak5" class="popup">
+                                <div>
+                                    <a href="#kopen"><h5>&times;</h5></a>
+                                    <img src="beelden/rugzak5.png">
+                                </div>
+                            </li>
+                <li id="web" class="popup">
+                                <div>
+                                    <a href="#"><h5>&times;</h5></a>
+                                    <a href="http://cyrilpasseur.donboscohalle.net/opdracht/webshop/"><img src="beelden/webshop.png"></a>
+                                </div>
+                            </li>
+            </main>
+        </body>
+    </html>
